@@ -27,11 +27,14 @@ public class Calculator {
                 case '/':
                     result = num1 / num2;
                     break;
+                default:
+                    System.out.println("Введите правильный оператор");
+                    operation = scanner.next().charAt(0);
             }
             System.out.println("Результат " + result);
-        } catch (InputMismatchException e1) {
+        } catch (InputMismatchException e) {
             System.out.println("Введено некорректное значение");
-        } catch (ArithmeticException e2) {
+        } catch (ArithmeticException e) {
             System.out.println("На 0 делить нельзя");
         } finally {
             System.out.println("Программа завершилась");
